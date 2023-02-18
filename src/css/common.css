@@ -29,12 +29,12 @@ button {
   display: flex;
 }
 
-.gallery_li {
+.gallery__li {
   width: 33.33%;
   padding: 0 10px;
 }
 
-.gallery_img{
+.gallery__img{
   max-width: 100%;
   object-fit: cover;
   aspect-ratio: 3/4;

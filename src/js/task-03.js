@@ -14,21 +14,10 @@ const images = [
 ];
 
 const holderEl = document.querySelector(".gallery");
-// console.log(holderEl);
+console.log(holderEl);
 
-const makeImages = (images) => {
-  return images.map(image => {
-    const listEl = document.createElement("li");
-    listEl.classList.add('gallery_li')
-  
-    const imgEl = document.createElement("img");
-    imgEl.classList.add('gallery_img');
-    imgEl.src = image.url;
-    imgEl.alt = image.alt;
-    listEl.appendChild(imgEl);
-    return listEl;
-  })
-}
+ const makeImageEl = images.map(({ url, alt }) => 
+ `<li><img src='${url}' alt='${alt}' width='300' height='200'></li>`)
+  console.log(makeImageEl);
 
-const holder = makeImages(images);
-holderEl.append(...holder);
+holderEl.insertAdjacentHTML('afterbegin', makeImageEl);
